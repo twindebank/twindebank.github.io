@@ -1,0 +1,179 @@
+/* Flex styles -------------------------------------------------*/
+header {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    .leading {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Grid styles -------------------------------------------------*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) ;
+    grid-gap: 30px;
+    position: relative;
+}
+
+
+/* Generic styles ----------------------------------------------*/
+
+.leading {
+    height: 240px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.leading-bigtext {
+    font-weight: 100;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.leading-text {
+    max-width: 900px;
+    font-size: 14px;
+    text-align: justify;
+    padding: 20px;
+    font-weight: 100;
+    line-height: 25px;
+
+}
+
+@media (min-width: 700px) and (max-width: 899px) {
+    .leading-bigtext {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 900px) {
+    .leading-bigtext {
+        font-size: 80px;
+    }
+    .leading-text {
+        padding: 0px 50px 0px 50px;
+    }
+}
+
+.section-title{
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left: 50px;
+    margin-top:20px;
+}
+
+
+ /*cards*/
+
+
+.cards {
+    max-width: 960px;
+    margin: 0 auto 30px;
+    padding: 50px;
+    color: black;
+}
+
+.cventry {
+    position: relative;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cventry:after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: lightskyblue;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+
+.cventry .entry-header{
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.cventry .entry-title {
+    font-weight: 500;
+    float: left;
+    line-height: 20px;
+}
+
+.cventry .entry-date{
+    font-size: 12px;
+    float: right;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.cventry .entry-subheader{
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.cventry .entry-organisation{
+    line-height: 20px;
+    float: left;
+}
+
+.cventry .entry-location {
+    line-height: 20px;
+    font-size: 12px;
+    float: right;
+    margin-right: 10px;
+
+}
+
+
+
+.cventry .entry-body{
+    clear: both;
+    padding: 10px;
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.cventry .entry-body li{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.article-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.article-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}

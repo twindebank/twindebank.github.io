@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/animate-custom.css">
     <link rel="stylesheet" href="css/home.css">
-
+    <link rel="stylesheet" href="css/main.css">
 
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -60,7 +60,7 @@
         $("a.transition").click(function (event) {
             event.preventDefault();
             linkLocation = this.href;
-            $("body").fadeOut(500, redirectPage);
+            $("#cent_wrap").fadeOut(500, redirectPage);
         });
 
         function redirectPage() {
