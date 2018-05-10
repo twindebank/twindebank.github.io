@@ -24,3 +24,8 @@ body::after {
     filter: grayscale(100%) invert(100%) blur(0px);
 
 }
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}

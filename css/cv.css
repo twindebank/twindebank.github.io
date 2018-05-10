@@ -3,7 +3,25 @@ body{
     overflow-y: auto ;
 }
 
-/* Grid styles -------------------------------------------------*/
+header{
+    display: block;
+    color: white;
+    font-weight: 100;
+    padding: 10px;
+    font-size: 12px;
+    background-color: black;
+    text-align: center;
+    /*border-bottom: 1px solid gray;*/
+}
+
+header a:hover, header a:visited, header a:link, header a:active{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+    /* Grid styles -------------------------------------------------*/
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
@@ -23,13 +41,23 @@ body{
     background-size: cover;
     color: white;
     text-align: center;
+    text-decoration: none;
 }
 
 .leading-bigtext {
     font-weight: 100;
     font-size: 40px;
     text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    text-underline: none;
 }
+.leading-bigtext a:visited{
+    text-decoration: none;
+    color: white;
+    text-underline: none;
+}
+
 
 .leading-text {
     max-width: 900px;
@@ -55,6 +83,13 @@ body{
     text-decoration: underline;
 }
 
+/*article{*/
+    /*opacity: 0.95;*/
+/*}*/
+
+/*.cards article:first-of-type {*/
+    /*opacity: 1;*/
+/*}*/
 
  /*cards*/
 .cards {
@@ -125,20 +160,6 @@ body{
 
 }
 
-
-.article-img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.article-title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
 .skills{
     text-align: justify;

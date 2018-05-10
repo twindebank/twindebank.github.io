@@ -1,7 +1,7 @@
 import json
 import os
 
-from dominate.tags import body, section, p, div, article, i, span
+from dominate.tags import body, section, p, div, article, i, span, a
 
 from src.patched_scraper import PatchedScraper
 
@@ -19,7 +19,8 @@ def profile_to_html(profile_info):
     html_body = body()
     with html_body:
         with section(_class="leading animated fadeInDown"):
-            p(profile_info['personal_info']['name'], _class="leading-bigtext")
+            with a(href='/'):
+                p(profile_info['personal_info']['name'], _class="leading-bigtext")
             p(profile_info['personal_info']['summary'][:-4], _class="leading-text")
         for section_title in ['education', 'jobs', 'volunteering']:
             with section(_class=f"cards animated fadeInUp {section_title}"):
