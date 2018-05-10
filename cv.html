@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cv.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate-custom.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
+    <!--TODO: think about order, less recent less opacity? first one brighter? current / skills / education / experience-->
+
 </head>
 <body>
-<main>
-    <section class="leading">
+    <section class="leading animated fadeInDown">
         <p class="leading-bigtext">Theo Windebank</p>
         <p class="leading-text">Having graduated from the University of Oxford with a high 2.i in Engineering Science, I am now on the pursuit to advance my career in applied Machine Learning and Data Science. My current position has me working as part of a team to deliver a centralised machine learning platform for usage across the BBC's many divisions.</p>
     </section>
-    <section class="cards">
+    <section class="cards animated fadeInUp">
         <div class="section-title">EDUCATION</div>
         <article>
             <div class="cventry">
@@ -64,17 +66,52 @@
                 </div>
             </div>
         </article>
+    </section>
+    <section class="cards animated fadeInUp">
+        <div class="section-title">Experience</div>
         <article>
-            <img class="article-img" src="http://placekitten.com/330/240" alt=" " />
-            <h1 class="article-title">
-                Title of article
-            </h1>
+            <div class="cventry">
+                <div class="entry-header">
+                    <div class="entry-title">Software Engineer</div>
+                    <div class="entry-date">Jun 2017 - Present</div>
+                </div>
+                <div class="entry-subheader">
+                    <div class="entry-organisation">Cue Sense Ltd.</div>
+                    <div class="entry-location">London, United Kingdom</div>
+                </div>
+                <div class="entry-body">
+                    <ul>
+                        <li>Led the design of a comprehensive code-base for a product designed to help visually impaired people to interpret non-verbal cues, utilising computer vision and machine learning.</li>
+
+                        <li>Constructed the entire image processing, image classification, and binaural sound feedback pipeline for the software prototype, using Python 3.6 and a multitude of advanced data science techniques. This has built upon my experience of creating whole unique machine learning pipelines for novel applications.</li>
+
+                        <li>Designed around challenging physical and economical constraints, helping expand my knowledge and practical experience in designing software architecture and core algorithms for market-facing products.</li>
+
+                        <li>Pitched the product to potential investors, heightening my awareness and understanding of the marketing and business aspects to developing a novel, innovative product.</li>
+                    </ul>
+                </div>
+            </div>
         </article>
         <article>
-            <img class="article-img" src="http://placekitten.com/280/250" alt=" " />
-            <h1 class="article-title">
-                Title of article
-            </h1>
+            <div class="cventry">
+                <div class="entry-header">
+                    <div class="entry-title">Software Engineer</div>
+                    <div class="entry-date">Jun 2017 - Present</div>
+                </div>
+                <div class="entry-subheader">
+                    <div class="entry-organisation">Cue Sense Ltd.</div>
+                    <div class="entry-location">London, United Kingdom</div>
+                </div>
+                <div class="entry-body">
+                    <ul>
+                        <li>Led the design of a comprehensive code-base for a product designed to help visually impaired people to interpret non-verbal cues, utilising computer vision and machine learning.</li>
+
+                        <li>Constructed the entire image processing, image classification, and binaural sound feedback pipeline for the software prototype, using Python 3.6 and a multitude of advanced data science techniques. This has built upon my experience of creating whole unique machine learning pipelines for novel applications.</li>
+
+                        <li>Designed around challenging physical and economical constraints, helping expand my knowledge and practical experience in designing software architecture and core algorithms for market-facing products.</li>
+                    </ul>
+                </div>
+            </div>
         </article>
         <article>
             <img class="article-img" src="http://placekitten.com/310/210" alt=" " />
@@ -89,6 +126,5 @@
             </h1>
         </article>
     </section>
-</main>
 </body>
 </html>
