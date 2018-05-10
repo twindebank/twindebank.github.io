@@ -52,7 +52,7 @@ header a:hover, header a:visited, header a:link, header a:active{
     color: white;
     text-underline: none;
 }
-.leading-bigtext a:visited{
+.leading-bigtext a:visited, .leading-bigtext a:hover, .leading-bigtext a:link, .leading-bigtext a:active {
     text-decoration: none;
     color: white;
     text-underline: none;
