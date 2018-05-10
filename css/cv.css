@@ -135,18 +135,9 @@ body{
     font-size: 12px;
     line-height: 22px;
     text-align: justify;
-}
-
-.cventry .entry-body li{
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
     font-weight: 100;
 
 }
-
-
-
 
 
 .article-img {

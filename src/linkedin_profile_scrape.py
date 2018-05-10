@@ -1,7 +1,7 @@
 import json
 import os
 
-from dominate.tags import body, section, p, div, article
+from dominate.tags import body, section, p, div, article, i, span
 from scrape_linkedin import Scraper
 
 
@@ -14,12 +14,11 @@ def scrape_profile(cookie):
 def profile_to_html(profile_info):
     html_body = body()
     with html_body:
-        with _main():
         with section(_class="leading animated fadeInDown"):
             p(profile_info['personal_info']['name'], _class="leading-bigtext")
-            p(profile_info['personal_info']['summary'], _class="leading-bigtext")
-        with section(_class="cards animated fadeInUp"):
-            for section_title, roles in profile_info['experiences'].items():
+            p(profile_info['personal_info']['summary'], _class="leading-text")
+        for section_title, roles in profile_info['experiences'].items():
+            with section(_class="cards animated fadeInUp"):
                 div(section_title, _class='section-title')
                 for role in roles:
                     if len(set(role.values())) > 1:
@@ -41,8 +40,12 @@ def profile_to_html(profile_info):
                                         div(role['date_range'], _class='entry-date')
                                     with div(_class="entry-subheader"):
                                         div(role['name'], _class='entry-organisation')
-                                        div(f"{role['degree']} <i>{role['grades']}</i>", _class='entry-location')
-    return str(body)
+                                        with div(_class='entry-location'):
+                                            if role['degree']:
+                                                span(role['degree'])
+                                                if role['grades']:
+                                                    i(f", {role['grades']}", style="font-weight:300")
+    return str(html_body)
 
 
 def save_html(html, filename):
