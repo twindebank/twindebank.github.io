@@ -2,13 +2,14 @@ import json
 import os
 
 from dominate.tags import body, section, p, div, article, i, span
-from scrape_linkedin import Scraper
+
+from src.patched_scraper import PatchedScraper
 
 
 def scrape_profile(cookie):
-    with Scraper(cookie=cookie) as scraper:
+    with PatchedScraper(cookie=cookie) as scraper:
         profile_info = scraper.get_profile('http://www.linkedin.com/in/theowindebank').to_dict()
-        return profile_info
+        return replace_none_with_str_recurs(profile_info)
 
 
 def profile_to_html(profile_info):
@@ -30,21 +31,20 @@ def profile_to_html(profile_info):
                                         div(role['date_range'], _class='entry-date')
                                     with div(_class="entry-subheader"):
                                         div(role['company'], _class='entry-organisation')
-                                        if role['location']:
-                                            div(role['location'], _class='entry-location')
+                                        div(role['location'], _class='entry-location')
                                     div(role['description'], _class="entry-body")
                                 elif section_title == "education":
                                     with div(_class='entry-header'):
-                                        if role['field_of_study']:
-                                            div(role['field_of_study'], _class='entry-title')
+                                        div(role['field_of_study'], _class='entry-title')
                                         div(role['date_range'], _class='entry-date')
                                     with div(_class="entry-subheader"):
                                         div(role['name'], _class='entry-organisation')
                                         with div(_class='entry-location'):
-                                            if role['degree']:
                                                 span(role['degree'])
-                                                if role['grades']:
+                                                if role['grades'] != '':
                                                     i(f", {role['grades']}", style="font-weight:300")
+                                    div(role['description'], _class="entry-body")
+
     return str(html_body)
 
 
@@ -52,6 +52,19 @@ def save_html(html, filename):
     cv_body_file = open(filename, "w")
     cv_body_file.write(html)
     cv_body_file.close()
+
+
+def replace_none_with_str_recurs(any_dict):
+    for k, v in any_dict.items():
+        if v is None:
+            any_dict[k] = ""
+        elif isinstance(v, dict):
+            replace_none_with_str_recurs(v)
+        elif isinstance(v, list):
+            for n, item in enumerate(v):
+                if isinstance(item, dict):
+                    replace_none_with_str_recurs(item)
+
 
 
 def main():
