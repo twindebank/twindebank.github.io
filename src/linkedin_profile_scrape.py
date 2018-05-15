@@ -1,7 +1,6 @@
-import json
 import os
 
-from dominate.tags import body, section, p, div, article, i, span, a
+from dominate.tags import body, section, p, div, article, i, span, a, ul, li
 
 from src.patched_scraper import PatchedScraper
 
@@ -37,7 +36,15 @@ def profile_to_html(profile_info):
                                     with div(_class="entry-subheader"):
                                         div(role['company'], _class='entry-organisation')
                                         div(role['location'], _class='entry-location')
-                                    div(role['description'], _class="entry-body")
+                                    with div(_class='entry-body'):
+                                        split = role['description'].split('- ')
+                                        if len(split) > 1:
+                                            with ul():
+                                                for para in split[1:]:
+                                                    li(para)
+                                        else:
+                                            p(role['description'])
+
                                 elif section_title == "education":
                                     with div(_class='entry-header'):
                                         div(role['name'], _class='entry-title')
@@ -49,7 +56,14 @@ def profile_to_html(profile_info):
                                             if role['grades'] != '' and role['degree'] != '':
                                                 span(', ')
                                             i(f"{role['grades']}", style="font-weight:300")
-                                    div(role['description'], _class="entry-body")
+                                    with div(_class='entry-body'):
+                                        split = role['description'].split('- ')
+                                        if len(split) > 1:
+                                            with ul():
+                                                for para in split[1:]:
+                                                    li(para)
+                                        else:
+                                            p(role['description'])
                                 elif section_title == "volunteering":
                                     with div(_class='entry-header'):
                                         div(role['title'], _class='entry-title')
@@ -57,7 +71,14 @@ def profile_to_html(profile_info):
                                     with div(_class="entry-subheader"):
                                         div(role['company'], _class='entry-organisation')
                                         # div(role['cause'], _class='entry-location')
-                                    div(role['description'], _class="entry-body")
+                                    with div(_class='entry-body'):
+                                        split = role['description'].split('- ')
+                                        if len(split) > 1:
+                                            with ul():
+                                                for para in split[1:]:
+                                                    li(para)
+                                        else:
+                                            p(role['description'])
         with section(_class="cards animated fadeInDown skills"):
             div('skills', _class='section-title')
             with article():
