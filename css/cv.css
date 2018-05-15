@@ -3,7 +3,7 @@ body{
     overflow-y: auto ;
 }
 
-header{
+footer{
     display: block;
     color: white;
     font-weight: 100;
@@ -14,7 +14,7 @@ header{
     /*border-bottom: 1px solid gray;*/
 }
 
-header a:hover, header a:visited, header a:link, header a:active{
+footer a:hover, footer a:visited, footer a:link, footer a:active{
     color: white;
     font-weight: bold;
 }
@@ -29,7 +29,7 @@ header a:hover, header a:visited, header a:link, header a:active{
     position: relative;
 }
 
-.card.education, .cards.volunteering, .cards.skills{
+.cards.volunteering, .cards.skills{
     display: block;
 }
 
