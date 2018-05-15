@@ -29,7 +29,7 @@ header a:hover, header a:visited, header a:link, header a:active{
     position: relative;
 }
 
-.cards.volunteering, .cards.skills{
+.card.education, .cards.volunteering, .cards.skills{
     display: block;
 }
 
