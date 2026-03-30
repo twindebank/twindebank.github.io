@@ -31,13 +31,16 @@ body {
 /* Name row */
 #name-row {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
 }
 
 #pdf-btn {
-  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
   border: 1px solid #333;
   color: #555;
   font-family: 'Roboto', sans-serif;
@@ -49,6 +52,7 @@ body {
   cursor: pointer;
   flex-shrink: 0;
   transition: color 0.2s, border-color 0.2s;
+  border-radius: 0;
 }
 
 #pdf-btn:hover {
