@@ -13,6 +13,7 @@
 </head>
 <body>
   <div id="cv">
+    <button id="pdf-btn" onclick="window.print()">PDF</button>
     <div id="content">Loading...</div>
   </div>
   <script>
@@ -47,15 +48,9 @@
         document.getElementById('content').innerHTML = marked.parse(md);
 
         const h1 = document.querySelector('#content h1');
-        const wrapper = document.createElement('div');
-        wrapper.id = 'name-row';
-        h1.parentNode.insertBefore(wrapper, h1);
-        wrapper.appendChild(h1);
-        const btn = document.createElement('button');
-        btn.id = 'pdf-btn';
-        btn.textContent = 'PDF';
-        btn.onclick = () => window.print();
-        wrapper.appendChild(btn);
+        const btn = document.getElementById('pdf-btn');
+        h1.style.cssText = 'display:flex; justify-content:space-between; align-items:center;';
+        h1.appendChild(btn);
 
         const headings = document.querySelectorAll('#content h3');
         let prevCompany = null;

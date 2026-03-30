@@ -28,13 +28,8 @@ body {
 }
 #back:hover { color: #fff; }
 
-/* Name row */
-#name-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0;
+#cv {
+  position: relative;
 }
 
 #pdf-btn {
@@ -50,7 +45,6 @@ body {
   text-transform: uppercase;
   padding: 5px 12px;
   cursor: pointer;
-  flex-shrink: 0;
   transition: color 0.2s, border-color 0.2s;
   border-radius: 0;
 }
