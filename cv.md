@@ -6,7 +6,9 @@ London, UK &nbsp;·&nbsp; [theowindebank.co.uk](https://theowindebank.co.uk) &nb
 
 ## Experience
 
-### Gradient Labs — Staff Engineer
+### Gradient Labs
+
+#### Staff Engineer
 Jul 2024 – Present · London, UK
 
 - Most tenured engineer and one of the most prolific — #1 author of the surviving codebase, with contributions spanning backend, infrastructure, frontend, and tooling.
@@ -20,48 +22,56 @@ Jul 2024 – Present · London, UK
 - Owned infrastructure across the board: Terraform, Grafana/Prometheus monitoring, alerting, and CI/CD — while regularly shipping product changes as a fully cross-stack engineer.
 - Early Claude Code adopter; built and advocated for worktree-based tooling that let the team parallelise AI-assisted development and meaningfully increase velocity.
 
-### Monzo Bank — Senior Backend Engineer
+### Monzo Bank
+
+#### Senior Backend Engineer
 May 2024 – Jul 2024 · London, UK
 
-### Monzo Bank — Backend Engineer
+#### Backend Engineer
 Jun 2022 – May 2024 · London, UK
 
 - Founding backend engineer on the squad that rebuilt Monzo's Home screen — one of the most central surfaces in the app, serving both customers and internal teams building on top of it.
 - Collaborated with backend and mobile engineers to build the ['Overview' framework](https://monzo.com/blog/how-we-built-the-new-home-screen): a server-driven, extensible system allowing other squads to contribute to and customise Home, effectively making the squad a platform team within Monzo.
 - Became deeply fluent in Go, taking on complex backend work across a high-traffic, cross-team surface.
 
-### Monzo Bank — Senior Data Engineer, Analytics
+#### Senior Data Engineer, Analytics
 Aug 2020 – Jun 2022 · London, UK
 
 - Key contributor to [Monzo's data stack](https://monzo.com/blog/2021/10/14/an-introduction-to-monzos-data-stack) — a centralised BigQuery/dbt/Airflow platform serving ~150 data contributors across the company.
 - Designed and built an [extension framework for dbt](https://monzo.com/blog/2022/12/15/building-an-extension-framework-for-dbt) that replaced a hard-to-maintain internal fork, enabling faster upgrades and modular customisation across ~6,900 models.
 - Led data governance work including access control patterns and tooling for managing sensitive data at scale.
 
-### Monzo Bank — Data Engineer, Analytics
+#### Data Engineer, Analytics
 Apr 2019 – Aug 2020 · London, UK
 
 - Rolled out dbt across the company; designed supporting infrastructure and onboarding docs used by over 100 engineers.
 - Designed and led development of a distributed access control system written in Go for sensitive user data.
 
-### BBC — Interim Lead Data Engineer
+### BBC
+
+#### Interim Lead Data Engineer
 Dec 2018 – Mar 2019 · London, UK
 
 - Assumed lead engineer role during a 4-month rotation while the team restructured from one team of 15 into two smaller squads, introduced OKRs, and pivoted to new objectives.
 - Led recruitment of a principal engineer: wrote interview questions, evaluated candidates, and assessed team fit.
 
-### BBC — Data Engineer
+#### Data Engineer
 Nov 2017 – Mar 2019 · London, UK
 
 - Part of BBC Datalab from its early formation — helped build BBC+, the first BBC app to serve fully automated ML recommendations, built from scratch on a Kubernetes/GCP microservice architecture.
 - Worked on a subsequent internal ML platform, including deploying JupyterHub with audited access to user and content data, and building tooling to version data and graph pipeline dependencies for full reproducibility.
 - [Spoke at PyData London 2018](https://pydata.org/london2018/speaker/profile/140/).
 
-### Cue Sense Ltd. — Software Engineer
+### Cue Sense Ltd.
+
+#### Software Engineer
 Jun 2017 – Nov 2017 · London, UK
 
 - Built software to help visually impaired people interpret non-verbal cues using computer vision and machine learning.
 
-### Oxford Machine Learning Research Group — Software Developer Intern
+### Oxford Machine Learning Research Group
+
+#### Software Developer Intern
 Jul 2016 – Sep 2016 · Oxford, UK
 
 - Developed ML techniques to detect mosquito presence, species, and gender from audio recordings; built upon in [my fourth year project](https://github.com/twindebank/4YP-Report), graded 83.

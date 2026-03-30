@@ -94,21 +94,23 @@ h2 {
   margin: 0 0 20px;
 }
 
-/* Entry title (Company — Role) */
+/* Company heading */
 h3 {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
-  margin: 0 0 2px;
+  margin: 24px 0 10px;
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-h3.company-change {
-  margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #1a1a1a;
+}
+
+h2 + h3 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .entry-logo {
@@ -119,8 +121,16 @@ h3.company-change {
   opacity: 0.85;
 }
 
-/* Dates/location line (paragraph immediately after h3) */
-h3 + p {
+/* Role title */
+h4 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ccc;
+  margin: 12px 0 2px;
+}
+
+/* Dates/location line (paragraph immediately after h4) */
+h4 + p {
   font-size: 11px;
   color: #555;
   margin: 0 0 6px;
@@ -190,12 +200,13 @@ a:hover { color: #fff; }
 
   hr { border-top-color: #ddd; }
   h2 { color: #888; }
-  h3 { color: #000; }
-  h3 + p { color: #666; }
+  h3 { color: #000; border-top-color: #ddd; }
+  h4 { color: #333; }
+  h4 + p { color: #666; }
 
   p { color: #222; }
   li { color: #333; }
 
-  h3 { page-break-after: avoid; }
+  h3, h4 { page-break-after: avoid; }
   ul { page-break-inside: avoid; }
 }

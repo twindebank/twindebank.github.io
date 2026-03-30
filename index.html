@@ -92,17 +92,8 @@
         h1.style.cssText = 'display:flex; justify-content:space-between; align-items:center;';
         h1.appendChild(btn);
 
-        const headings = document.querySelectorAll('#content h3');
-        let prevCompany = null;
-        headings.forEach(h3 => {
+        document.querySelectorAll('#content h3').forEach(h3 => {
           const text = h3.textContent;
-          const company = text.split('—')[0].trim();
-
-          if (prevCompany !== null && company !== prevCompany) {
-            h3.classList.add('company-change');
-          }
-          prevCompany = company;
-
           const match = Object.entries(logos).find(([name]) => text.startsWith(name));
           if (match) {
             const img = document.createElement('img');
