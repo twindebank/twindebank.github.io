@@ -1,183 +1,171 @@
-body{
-    overflow-x: hidden;
-    overflow-y: auto ;
+/* ── Screen ───────────────────────────────────────────────────────────── */
+
+body {
+  background: #000;
+  color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
 }
 
-footer{
-    display: block;
-    color: white;
-    font-weight: 100;
-    padding: 10px;
-    font-size: 12px;
-    background-color: black;
-    text-align: center;
-    /*border-bottom: 1px solid gray;*/
+#cv {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
 }
 
-footer a:hover, footer a:visited, footer a:link, footer a:active{
-    color: white;
-    font-weight: bold;
+#back {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #444;
+  text-decoration: none;
+}
+#back:hover { color: #fff; }
+
+/* Name */
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 8px;
 }
 
+/* Contact line (paragraph right after h1) */
+h1 + p {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 8px;
+}
+h1 + p a { color: #555; text-decoration: none; }
+h1 + p a:hover { color: #fff; }
 
-
-    /* Grid styles -------------------------------------------------*/
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
-    grid-gap: 30px;
-    position: relative;
+/* Dividers */
+hr {
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  margin: 32px 0;
 }
 
-.cards.volunteering, .cards.skills{
-    display: block;
+/* Section headers */
+h2 {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #444;
+  margin: 0 0 20px;
 }
 
-/* Generic styles ----------------------------------------------*/
-
-.leading {
-    /*height: 240px;*/
-    padding: 30px 30px 0 30px;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    text-decoration: none;
+/* Entry title (Company — Role) */
+h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.leading-bigtext {
-    font-weight: 100;
-    font-size: 40px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    text-underline: none;
-}
-.leading-bigtext a:visited, .leading-bigtext a:hover, .leading-bigtext a:link, .leading-bigtext a:active {
-    text-decoration: none;
-    color: white;
-    text-underline: none;
+h3.company-change {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #1a1a1a;
 }
 
-
-.leading-text {
-    max-width: 900px;
-    font-size: 12px;
-    text-align: justify;
-    padding: 20px;
-    font-weight: 100;
-    line-height: 25px;
-    margin: auto;
+.entry-logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
-.section-title{
-    color: white;
-    font-weight: 100;
-    font-size: 25px;
-    position: absolute;
-    top:0;
-    left:0;
-    margin-left: 50px;
-    margin-top:20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-decoration: underline;
+/* Dates/location line (paragraph immediately after h3) */
+h3 + p {
+  font-size: 11px;
+  color: #555;
+  margin: 0 0 6px;
+  letter-spacing: 0.5px;
 }
 
-/*article{*/
-    /*opacity: 0.95;*/
-/*}*/
-
-/*.cards article:first-of-type {*/
-    /*opacity: 1;*/
-/*}*/
-
- /*cards*/
-.cards {
-    max-width: 960px;
-    margin: 0 auto 0;
-    padding: 50px;
+/* Body text / bullets */
+p {
+  font-size: 13px;
+  color: #bbb;
+  margin: 0 0 16px;
 }
 
-.cventry {
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-    color: white;
+ul {
+  margin: 4px 0 16px;
+  padding-left: 18px;
+}
+li {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 2px;
 }
 
-
-.cventry .entry-header{
-    display: block;
-    clear: both;
-    position: relative;
+/* Skills — last paragraph */
+h2:last-of-type + p {
+  color: #666;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
-.cventry .entry-title {
-    font-weight: 500;
-    float: left;
-    line-height: 20px;
+em { color: #aaa; font-style: italic; }
+
+blockquote {
+  margin: 4px 0 16px 16px;
+  padding: 0;
+  border: none;
 }
-
-.cventry .entry-date{
-    font-size: 12px;
-    float: right;
-    line-height: 20px;
-    margin-right: 10px;
-    font-style: italic;
-}
-
-.cventry .entry-subheader{
-    display: block;
-    clear: both;
-    position: relative;
-}
-
-.cventry .entry-organisation{
-    line-height: 20px;
-    font-weight: 100;
-    float: left;
-    font-size: 15px;
-}
-
-.cventry .entry-location {
-    line-height: 20px;
-    font-size: 12px;
-    float: right;
-    margin-right: 10px;
-
-}
+p em { color: #5a5a5a; font-style: normal; font-size: 11px; position: relative; top: -0.5px; margin: 0 3px; }
+a { color: #888; }
+a:hover { color: #fff; }
 
 
+/* ── Print / PDF ──────────────────────────────────────────────────────── */
 
-.cventry .entry-body{
-    clear: both;
-    padding: 10px 20px 10px 10px;
-    position: relative;
-}
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+  }
 
-.cventry .entry-body ul li, .cventry .entry-body p {
-    font-size: 12px;
-    line-height: 22px;
-    text-align: justify;
-    font-weight: 100;
-}
+  #cv {
+    max-width: none;
+    padding: 0;
+  }
 
-.cventry .entry-body ul li {
-    padding: 10px 0px;
-    margin-left: 10px;
-    list-style: circle ;
-}
+  #back { display: none; }
 
+  h1 {
+    font-size: 20pt;
+    color: #000;
+    letter-spacing: 4px;
+  }
 
-.skills{
-    text-align: justify;
-}
+  h1 + p { color: #555; }
+  h1 + p a { color: #555; }
 
-.skills .skill{
-    display: inline-block;
-    margin:10px;
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,0.7);
-    border-radius: 5px;
-    font-weight: 100;
+  hr { border-top-color: #ddd; }
+  h2 { color: #888; }
+  h3 { color: #000; }
+  h3 + p { color: #666; }
+
+  p { color: #222; }
+  li { color: #333; }
+
+  h3 { page-break-after: avoid; }
+  ul { page-break-inside: avoid; }
 }
