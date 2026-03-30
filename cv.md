@@ -99,4 +99,4 @@ Sep 2013 – Jun 2017 · St. Catherine's College · 2.i (68)
 
 ## Skills
 
-Go · Python · SQL · PostgreSQL · MCP · Temporal · Kubernetes · GCP · Terraform · Docker · Encore · Grafana · Prometheus · dbt · Airflow · BigQuery · Kafka · ElasticSearch · TypeScript / React / Next.js *(Claude Code assisted)* · Machine Learning · Distributed Systems · Claude Code · Public Speaking
+Go · Python · MCP · Claude Code · Temporal · Distributed Systems · Kubernetes · Terraform · GCP · Docker · Grafana · Prometheus · Kafka · SQL · dbt · Airflow · BigQuery · ElasticSearch · TypeScript / React / Next.js *(Claude Code assisted)* · Machine Learning · Encore · Public Speaking
