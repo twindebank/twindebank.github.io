@@ -45,6 +45,18 @@
       .then(r => r.text())
       .then(md => {
         document.getElementById('content').innerHTML = marked.parse(md);
+
+        const h1 = document.querySelector('#content h1');
+        const wrapper = document.createElement('div');
+        wrapper.id = 'name-row';
+        h1.parentNode.insertBefore(wrapper, h1);
+        wrapper.appendChild(h1);
+        const btn = document.createElement('button');
+        btn.id = 'pdf-btn';
+        btn.textContent = 'PDF';
+        btn.onclick = () => window.print();
+        wrapper.appendChild(btn);
+
         const headings = document.querySelectorAll('#content h3');
         let prevCompany = null;
         headings.forEach(h3 => {

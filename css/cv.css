@@ -28,6 +28,38 @@ body {
 }
 #back:hover { color: #fff; }
 
+/* Name row */
+#name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+#pdf-btn {
+  background: none;
+  border: 1px solid #333;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#pdf-btn:hover {
+  color: #fff;
+  border-color: #666;
+}
+
+@media print {
+  #pdf-btn { display: none; }
+}
+
 /* Name */
 h1 {
   font-size: 28px;
