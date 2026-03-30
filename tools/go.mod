@@ -2,6 +2,8 @@ module github.com/twindebank/twindebank.github.io/tools
 
 go 1.23
 
+toolchain go1.26.1
+
 require github.com/chromedp/chromedp v0.11.2
 
 require (
